@@ -1,17 +1,21 @@
 import React from 'react';
-import logo from '../logo.svg';
-import { Counter } from '../features/counter/Counter';
 import './App.css';
 import Header from '../components/Header';
 import SearchBar from '../components/SearchBar';
+import SearchResults from '../components/SearchResults';
+import PlayList from '../components/Playlist';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <div className="content">
-        <SearchBar className="SearchBar" />
-      </div>
+      <main className="content">
+        <SearchBar className="search-bar" />
+        <div className="app-playlist">
+          <SearchResults className="search-results" />
+          <PlayList className="playlist" />
+        </div>
+      </main>
     </div>
   );
 }
